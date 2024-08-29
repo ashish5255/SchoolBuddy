@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Programs from "./components/Programs/Programs";
 import Title from "./components/Title/Title";
+import About from "./components/About/About";
+
 const App = () => {
   return (
     <div>
@@ -13,6 +15,8 @@ const App = () => {
         <Title title1="Our Programs" title2="What We Offer?" />
         <Programs />
       </div>
+
+      <About />
     </div>
   );
 };
