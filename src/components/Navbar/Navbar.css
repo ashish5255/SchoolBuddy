@@ -1,0 +1,29 @@
+nav {
+  width: 100%;
+  /* background: #333; */
+  color: #ffff;
+  padding: 4px, 0;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  padding-top: 10px;
+}
+
+/* Reduce the logo size */
+.logo {
+  width: 180px;
+  cursor: pointer;
+}
+
+/* Organizing Menu Items */
+nav ul li {
+  /* The following line makes the menu item in a single line instead of different newlines */
+  display: inline-block;
+  /*Now margin and stuffs */
+  list-style: none;
+  margin: 5px 20px;
+}
