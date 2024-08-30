@@ -42,6 +42,11 @@ a {
   cursor: pointer;
 }
 
+.dark-btn {
+  background: #212ea0;
+  color: #ffff;
+}
+
 .btn img {
   width: 20px;
 

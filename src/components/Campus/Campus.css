@@ -1,0 +1,19 @@
+.campus {
+  margin: 80px auto;
+  width: 90%;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+/* Here the images inside gallery is set to 23.5 so
+ remaining 6 percent is space  */
+.gallery img {
+  width: 23.5%;
+  border-radius: 8px;
+}
