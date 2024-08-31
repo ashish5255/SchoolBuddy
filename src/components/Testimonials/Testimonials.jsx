@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Testimonials.css";
 import next_icon from "../../assets/next-icon.png";
 import back_icon from "../../assets/back-icon.png";
@@ -7,11 +7,26 @@ import user_2 from "../../assets/user-2.png";
 import user_3 from "../../assets/user-3.png";
 import user_4 from "../../assets/user-4.png";
 
-// We are going to create slider in testimonials
+// Imma create slider in testimonials
 const Testimonials = () => {
-  const slideForward = () => {};
+  // Imma access the ul in which li elements are by using name slider
+  const slider = useRef();
+  // Defining initial value of transformation
+  let tx = 0;
 
-  const slidebackward = () => {};
+  const slideForward = () => {
+    if (tx > -50) {
+      tx -= 25;
+    }
+    slider.current.style.transform = `translateX(${tx}%)`;
+  };
+
+  const slideBackward = () => {
+    if (tx < 0) {
+      tx += 25;
+    }
+    slider.current.style.transform = `translateX(${tx}%)`;
+  };
 
   return (
     <div className="testimonials">
@@ -20,13 +35,14 @@ const Testimonials = () => {
         src={back_icon}
         alt=""
         className="back-btn"
-        onClick={slidebackward}
+        onClick={slideBackward}
       />
 
       {/* Now creating Slider */}
 
       <div className="slider">
-        <ul>
+        {/* ref= slider allows to access the below ul tag by using name slider */}
+        <ul ref={slider}>
           <li>
             <div className="slide">
               <div className="user-info">
