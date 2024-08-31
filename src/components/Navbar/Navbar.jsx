@@ -15,7 +15,9 @@ const Navbar = () => {
     <div>
       {/* when sticky is true, the dark-nav is applied into navbar */}
       <nav className={`container ${sticky ? "dark-nav" : ""}`}>
-        <img className="logo" src={logo} alt="logo" />
+        {/* <img className="logo" src={logo} alt="logo" /> */}
+        {/* replacing the above image with h1 */}
+        <h1>SchoolBuddy</h1>
         <ul>
           <li>Home</li>
           <li>Program</li>
