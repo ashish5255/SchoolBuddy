@@ -16,9 +16,11 @@ nav {
 /* Reduce the logo size */
 .logo {
   width: 180px;
-  cursor: pointer;
 }
 
+h1 {
+  cursor: pointer;
+}
 /* Organizing Menu Items */
 nav ul li {
   /* The following line makes the menu item in a single line instead of different newlines */
@@ -31,4 +33,50 @@ nav ul li {
 .dark-nav {
   background: #1e2677;
   transition: 0.2s;
+}
+.menu-icon {
+  display: none;
+}
+/*  Moving on to Media Query */
+@media (max-width: 1000px) {
+  .logo {
+    max-width: 140px;
+  }
+  nav ul li {
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 840px) {
+  nav {
+    padding: 15px 0;
+  }
+  /* now making responsive hamburger menu for mobile devices */
+  nav ul {
+    position: fixed;
+    top: 0;
+    bottom: 0; /* making this occupy full height*/
+    /* moving the bar away from viewport as width is 200 */
+    right: 0;
+    background: #212ea0;
+    width: 200px;
+    z-index: -1;
+  }
+
+  nav ul li {
+    /* making list items vertically apperar */
+    display: block;
+    margin: 2rem 1.5rem;
+    padding: 5px;
+  }
+  /* making icon visible now */
+  .menu-icon {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .hide-menu {
+    right: -200px;
+  }
 }
