@@ -50,12 +50,13 @@ nav ul li {
 @media (max-width: 840px) {
   nav {
     padding: 15px 0;
+    opacity: 95%;
   }
   /* now making responsive hamburger menu for mobile devices */
   nav ul {
     position: fixed;
     top: 0;
-    bottom: 0; /* making this occupy full height*/
+    bottom: 50%; /* making this occupy full height*/
     /* moving the bar away from viewport as width is 200 */
     right: 0;
     background: #212ea0;
