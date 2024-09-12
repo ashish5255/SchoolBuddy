@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Programs from "./components/Programs/Programs";
@@ -10,6 +10,9 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 const App = () => {
+  // working on the video player
+  const [playState, setPlayState] = useState(false);
+
   return (
     <>
       <div>
@@ -22,7 +25,7 @@ const App = () => {
         </div>
 
         {/* Moving on to the gallery, reusing the title created earlier */}
-        <About />
+        <About setPlayState={setPlayState} />
         <Title title1="Gallery" title2="Campus Photos" />
         <Campus />
 
@@ -34,7 +37,7 @@ const App = () => {
         <Footer />
       </div>
 
-      <VideoPlayer />
+      <VideoPlayer playState={playState} setPlayState={setPlayState} />
     </>
   );
 };
